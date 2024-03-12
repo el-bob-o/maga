@@ -319,10 +319,10 @@ function internal_augment(style,stone)
     status[stone] = status[stone] - 1
     
     local inject = packets.new("outgoing", 0x5b, {
-                ['Target'] = 17809550,
+                ['Target'] = 17809551,
                 ['Option Index'] = a,
                 ['_unknown1'] = b,
-                ['Target Index'] = 142,
+                ['Target Index'] = 143,
                 ['Automated Message'] = true,
                 ['Zone'] = 252,
                 ['Menu ID'] = 9507
@@ -344,10 +344,10 @@ function cancel()
         status.gear = nil
     
         local inject = packets.new("outgoing", 0x5b, {
-                ['Target'] = 17809550,
+                ['Target'] = 17809551,
                 ['Option Index'] = 0x0000,
                 ['_unknown1'] = 0x4000,
-                ['Target Index'] = 142,
+                ['Target Index'] = 143,
                 ['Automated Message'] = false,
                 ['Zone'] = 252,
                 ['Menu ID'] = 9507
@@ -368,10 +368,10 @@ function accept()
         notice("Accepting the most recently obtained augment...")
 
         local inject = packets.new("outgoing", 0x5b, {
-                ['Target'] = 17809550,
+                ['Target'] = 17809551,
                 ['Option Index'] = 0x0009,
                 ['_unknown1'] = 0x0000,
-                ['Target Index'] = 142,
+                ['Target Index'] = 143,
                 ['Automated Message'] = false,
                 ['Zone'] = 252,
                 ['Menu ID'] = 9507
